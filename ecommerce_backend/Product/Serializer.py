@@ -1,8 +1,8 @@
-from Serializer import ModelSerializer
+from rest_framework import serializers
 from .models import Products
 
-class ProductSerializer(ModelSerializer):
+class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Products
         fields = '__all__'
-        read_only_fields = ('id',)  # Assuming 'id' is an auto-generated field
+        # read_only_fields = ('id',)  # Assuming 'id' is an auto-generated field
